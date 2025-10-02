@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'Built'}
+    agent { label 'general' }
 
     stages {
         stage('Checkout') {
@@ -29,11 +29,11 @@ pipeline {
             steps {
                 echo 'Deploying WAR to Tomcat server...'
                 sshagent(['ec2-key']) {
-                    sh '''
+                    sh """
                         scp -o StrictHostKeyChecking=no \
-                        /var/lib/jenkins/workspace/Deployment/my-webapp/target/my-webapp.war \
+                        ${WORKSPACE}/my-webapp/target/my-webapp.war \
                         ec2-user@34.234.91.2:/home/ec2-user/apache-tomcat-9.0.109/webapps/
-                    '''
+                    """
                 }
             }
         }
