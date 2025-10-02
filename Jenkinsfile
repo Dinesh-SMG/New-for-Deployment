@@ -24,14 +24,27 @@ pipeline {
                 archiveArtifacts artifacts: 'my-webapp/target/*.war', fingerprint: true
             }
         }
+
+        stage('Deploy to Tomcat') {
+            steps {
+                echo 'Deploying WAR to Tomcat server...'
+                sshagent(['ec2-key']) {
+                    sh '''
+                        scp -o StrictHostKeyChecking=no \
+                        /var/lib/jenkins/workspace/Deployment/my-webapp/target/my-webapp.war \
+                        ec2-user@34.234.91.2:/home/ec2-user/apache-tomcat-9.0.109/webapps/
+                    '''
+                }
+            }
+        }
     }
 
     post {
         success {
-            echo 'Build and archive successful!'
+            echo 'Build, archive, and deployment successful!'
         }
         failure {
-            echo 'Build failed.'
+            echo 'Build or deployment failed.'
         }
     }
 }
