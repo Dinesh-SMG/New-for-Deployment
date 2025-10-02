@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building project...'
+                sh cd my-webapp/
                 // Use Maven to clean and package
                 sh 'mvn clean package'
             }
