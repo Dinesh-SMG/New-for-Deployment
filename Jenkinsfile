@@ -12,16 +12,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building project...'
-                sh cd my-webapp/
-                // Use Maven to clean and package
-                sh 'mvn clean package'
+                dir('my-webapp') {
+                    sh 'mvn clean package'
+                }
             }
         }
 
         stage('Archive WAR') {
             steps {
                 echo 'Archiving WAR file...'
-                archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
+                archiveArtifacts artifacts: 'my-webapp/target/*.war', fingerprint: true
             }
         }
     }
