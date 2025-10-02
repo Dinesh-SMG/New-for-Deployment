@@ -57,26 +57,32 @@
 </header>
 
 <section>
+    <!-- Weather Card -->
     <div class="card">
         <h2>Weather</h2>
-        <p>City: Bangalore</p>
-        <p>Temperature: 28°C</p>
-        <p>Condition: Sunny ☀️</p>
+        <p>City: Bengaluru</p>
+        <p>Temperature: 26°C</p>
+        <p>Condition: Mostly Cloudy ☁️</p>
+        <p>Wind: 19 km/h</p>
+        <p>Humidity: 68%</p>
     </div>
 
+    <!-- Stocks Card -->
     <div class="card">
         <h2>Stocks</h2>
-        <p>Nifty 50: 18,350 ↑</p>
-        <p>Sensex: 61,200 ↑</p>
-        <p>Infosys: ₹1,580 ↑</p>
+        <p>Nifty 50: 24,836.30 ↑</p>
+        <p>Sensex: 80,983.31 ↑</p>
+        <p>Infosys: ₹1,445.80 ↑</p>
     </div>
 
+    <!-- Gold & Silver Card -->
     <div class="card">
         <h2>Gold & Silver</h2>
-        <p>Gold: ₹5,200/g</p>
-        <p>Silver: ₹65/g</p>
+        <p>Gold (24K): ₹11,869/g</p>
+        <p>Silver: ₹153/g</p>
     </div>
 
+    <!-- Cricket News Card -->
     <div class="card">
         <h2>Cricket News</h2>
         <p>IND 🇮🇳 vs PAK 🇵🇰</p>
@@ -86,7 +92,7 @@
 </section>
 
 <footer>
-    🌸 Wishing you a very Happy Dasara! 🌸
+      Wishing you a very Happy Dasara! 
 </footer>
 
 </body>
