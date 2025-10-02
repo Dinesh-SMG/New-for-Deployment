@@ -3,41 +3,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to My WebApp!</title>
+    <title>My Mini Dashboard</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #ffecd2, #fcb69f);
-            text-align: center;
-            padding: 50px;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: #ff6f61;
-            font-size: 48px;
-        }
-        p {
-            font-size: 20px;
-            color: #333;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
+        header {
             background-color: #ff6f61;
             color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background 0.3s;
+            text-align: center;
+            padding: 20px;
         }
-        a:hover {
-            background-color: #ff3b2f;
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #ff6f61;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffecd2;
+            margin-top: 40px;
+            font-size: 18px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>🎉 Welcome to My WebApp! 🎉</h1>
-    <p>Click the button below to see your HelloServlet in action:</p>
-    <a href="hello">Say Hello</a>
+
+<header>
+    <h1>🎉 Mini Dashboard 🎉</h1>
+</header>
+
+<section>
+    <div class="card">
+        <h2>Weather</h2>
+        <p>City: Bangalore</p>
+        <p>Temperature: 28°C</p>
+        <p>Condition: Sunny ☀️</p>
+    </div>
+
+    <div class="card">
+        <h2>Stocks</h2>
+        <p>Nifty 50: 18,350 ↑</p>
+        <p>Sensex: 61,200 ↑</p>
+        <p>Infosys: ₹1,580 ↑</p>
+    </div>
+
+    <div class="card">
+        <h2>Gold & Silver</h2>
+        <p>Gold: ₹5,200/g</p>
+        <p>Silver: ₹65/g</p>
+    </div>
+
+    <div class="card">
+        <h2>Cricket News</h2>
+        <p>IND 🇮🇳 vs PAK 🇵🇰</p>
+        <p>Recent Match: India won by 5 wickets!</p>
+        <p>Player of the Match: Tilak Varma</p>
+    </div>
+</section>
+
+<footer>
+    🌸 Wishing you a very Happy Dasara! 🌸
+</footer>
+
 </body>
 </html>
